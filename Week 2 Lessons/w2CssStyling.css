@@ -1,0 +1,79 @@
+/* Applying Box Model */
+* {
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's width/height */
+}
+
+section {
+    margin: 20px;
+    padding: 15px;
+    border: 2px solid #4CAF50;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Using CSS Grid for layout */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    gap: 20px; /* Space between grid items */
+}
+
+.container div {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Using Flexbox for layout */
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Aligns items horizontally with space between them */
+    align-items: center; /* Vertically centers items */
+    gap: 15px;
+}
+
+.flex-item {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Default styles for larger screens */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Media Query for screens smaller than 600px (mobile) */
+@media (max-width: 600px) {
+    header {
+        font-size: 1.5em; /* Smaller font size for mobile */
+        padding: 10px;
+    }
+
+    section {
+        padding: 10px; /* Smaller padding for mobile */
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Switch to single column for smaller screens */
+    }
+
+    .flex-container {
+        flex-direction: column; /* Stack items vertically on mobile */
+    }
+}
